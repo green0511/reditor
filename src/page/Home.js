@@ -1,5 +1,15 @@
 import React from 'react';
 
-export default () => {
-  return <h2>Home</h2>;
+import { connect } from 'react-redux';
+
+import { dispatch } from '../store';
+
+const Home = props => {
+  return <h2 onClick={() => dispatch.count.increment(1) }>{props.count}</h2>;
 };
+
+const mapState = state => ({
+  ...state,
+});
+
+export default connect(mapState)(Home);
