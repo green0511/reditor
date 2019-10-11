@@ -14,7 +14,12 @@ export default () => {
           onClick={() => history.goBack()}
           className={`iconfont icon-jiantou-px ${style.topbarBackIcon}`}
         />
-        <span className={style.topbarEditIcon}>EDIT</span>
+        <span 
+          onClick={() => history.push('/edit')}
+          className={style.topbarEditIcon}
+        >
+          EDIT
+        </span>
       </header>
       <div className={style.draftTip}>该笔记有暂未发布的草稿，点击编辑继续创作~</div>
       <div className={style.articleContainer}>

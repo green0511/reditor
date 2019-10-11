@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 // import { dispatch } from '../../store';
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import style from './style.module.css';
 
@@ -19,6 +19,8 @@ const getFormtedDate = (date) => {
 const Home = (props = {}) => {
   const { user = {}, notes = {} } = props;
   const { list } = notes;
+
+  const history = useHistory();
 
   return (
     <div>
@@ -50,7 +52,7 @@ const Home = (props = {}) => {
           ) : null
         }
       </div>
-      <div className={style.newBtn}>
+      <div className={style.newBtn} onClick={() => history.push('/edit')}>
         <i className={`iconfont icon-plus-creat ${style.newBtnIcon}`} />
       </div>
     </div>
