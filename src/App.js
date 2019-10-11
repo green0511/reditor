@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 import Home from './page/Home/Home';
-import Article from './page/Article';
+import Article from './page/Article/Article';
 
 export default function App() {
   return (
