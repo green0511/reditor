@@ -6,6 +6,14 @@ import { connect } from 'react-redux';
 
 import style from './style.module.css';
 
+const MonthMap = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+
+const getFormtedDate = (date) => {
+  const month = date.getMonth();
+  const monStr = (MonthMap[month]).toUpperCase();
+  return `${monStr} ${date.getDate()}, ${date.getFullYear()}`;
+};
+
 const Home = (props = {}) => {
   const { user = {}, notes = {} } = props;
   const { list } = notes;
@@ -13,8 +21,6 @@ const Home = (props = {}) => {
   return (
     <div>
       <div className={style.topbar}>
-        {/* <i className={`icon-jiantou-px iconfont ${style.iconBack}`} /> */}
-        {/* <div className={style.avatar}></div> */}
         <img src={user.avatar} className={style.avatar} alt={user.name} />
       </div>
       <p className={style.userName}>Hello, {user.name}</p>
@@ -26,7 +32,7 @@ const Home = (props = {}) => {
             <div className={style.listItem} >
               <div className={style.listItemCover} />
               <div className={style.listItemMain}>
-                <p className={style.listItemTime}>FEB 19, 2018</p>
+                <p className={style.listItemTime}>{getFormtedDate(new Date(i.create_at))}</p>
                 <p className={style.listItemTitle}>{i.title}</p>
                 <div className={style.listItemPlaceholder} />
                 <p className={style.listItemSummay}>{i.summary}</p>
