@@ -12,19 +12,17 @@ import Edit from './page/Edit/Edit';
 export default function App() {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route path="/article">
-            <Article />
-          </Route>
-          <Route path="/edit">
-            <Edit />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route path="/article">
+          <Article />
+        </Route>
+        <Route path="/edit">
+          <Edit />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
     </Router>
   );
 }

@@ -1,0 +1,51 @@
+.bodyExtraStyle {
+  height: 100%;
+  overflow: auto;
+}
+
+.editorContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.editorBar {
+  position: relative;
+  z-index: 1;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fafafa;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.titleInputContainer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px 15px;
+  display: flex;
+  background-color: #fff;
+}
+
+.titleInput {
+  border: none;
+  outline: none;
+  padding: 0;
+  flex: 1;
+  height: 48px;
+  line-height: 48px;
+  font-size: 18px;
+  font-weight: bold;
+  text-indent: 5px;
+  -webkit-tap-highlight-color: transparent;
+  border-bottom: 1px solid #eee;
+}
+
+.contentInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0 15px;
+}
