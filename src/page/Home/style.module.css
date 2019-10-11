@@ -49,9 +49,14 @@
 }
 
 .listItem {
+  margin-bottom: 10px;
+}
+
+.listItemInner {
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .listItemCover {

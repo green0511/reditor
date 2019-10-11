@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 
 // import { dispatch } from '../../store';
 
+import { Link } from 'react-router-dom';
+
 import style from './style.module.css';
 
 const MonthMap = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
@@ -30,13 +32,15 @@ const Home = (props = {}) => {
         {
           list && list.length ? list.map(i => (
             <div className={style.listItem} >
-              <div className={style.listItemCover} />
-              <div className={style.listItemMain}>
-                <p className={style.listItemTime}>{getFormtedDate(new Date(i.create_at))}</p>
-                <p className={style.listItemTitle}>{i.title}</p>
-                <div className={style.listItemPlaceholder} />
-                <p className={style.listItemSummay}>{i.summary}</p>
-              </div>
+              <Link className={style.listItemInner} to='/article'>
+                <div className={style.listItemCover} />
+                <div className={style.listItemMain}>
+                  <p className={style.listItemTime}>{getFormtedDate(new Date(i.create_at))}</p>
+                  <p className={style.listItemTitle}>{i.title}</p>
+                  <div className={style.listItemPlaceholder} />
+                  <p className={style.listItemSummay}>{i.summary}</p>
+                </div>
+              </Link>
             </div>
           )) : null
         }
