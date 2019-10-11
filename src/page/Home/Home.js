@@ -46,6 +46,9 @@ const Home = (props = {}) => {
           ) : null
         }
       </div>
+      <div className={style.newBtn}>
+        <i className={`iconfont icon-plus-creat ${style.newBtnIcon}`} />
+      </div>
     </div>
   );
 };
