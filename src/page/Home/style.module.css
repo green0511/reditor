@@ -23,6 +23,7 @@
   height: 40px;
   border-radius: 6px;
   background-color: #ccc;
+  object-fit: cover;
 }
 
 .userName {

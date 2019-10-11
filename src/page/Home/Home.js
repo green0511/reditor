@@ -6,15 +6,18 @@ import { connect } from 'react-redux';
 
 import style from './style.module.css';
 
-const Home = (props) => {
-  const list = props.notes && props.notes.list;
+const Home = (props = {}) => {
+  const { user = {}, notes = {} } = props;
+  const { list } = notes;
+
   return (
     <div>
       <div className={style.topbar}>
         {/* <i className={`icon-jiantou-px iconfont ${style.iconBack}`} /> */}
-        <div className={style.avatar}></div>
+        {/* <div className={style.avatar}></div> */}
+        <img src={user.avatar} className={style.avatar} alt={user.name} />
       </div>
-      <p className={style.userName}>Hello, Green</p>
+      <p className={style.userName}>Hello, {user.name}</p>
       <p className={style.userGreet}>welcome to reditor</p>
       <div className={style.listContainer}>
         <p className={style.listContainerName}>Notes</p>
