@@ -16,7 +16,7 @@ export default function App() {
         <Route path="/article/:id">
           <Article />
         </Route>
-        <Route path="/edit">
+        <Route path="/edit/:id?">
           <Edit />
         </Route>
         <Route path="/">

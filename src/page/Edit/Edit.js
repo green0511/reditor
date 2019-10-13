@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
-import { useHistory } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { useHistory, useParams } from 'react-router-dom';
 
 import { dispatch } from '../../store';
 
@@ -10,14 +10,23 @@ import 'quill/dist/quill.snow.css';
 
 import style from './style.module.css';
 
-export default () => {
+const Edit = (props) => {
   const [editor, setEditor] = useState(null);
-  const [ title, setTitle ] = useState('');
+  const [title, setTitle] = useState('');
   const history = useHistory();
+  const routeParams = useParams();
+  let articleToEdit = null;
+
+  if (routeParams.id) {
+    const { list, searchMap } = props.notes || {};
+    const articleIndex = searchMap[routeParams.id];
+    const articleData = list[articleIndex];
+    articleToEdit = articleData;
+  }
 
   useEffect(() => {
     if (!editor) {
-      setEditor(new Quill('#editor', {
+      const newEditor = new Quill('#editor', {
         modules: {
           toolbar: [
             [{ header: [1, 2, 3, 4, 5, false] }],
@@ -26,15 +35,21 @@ export default () => {
           ]
         },
         theme: 'snow'
-      }));
+      });
+      setEditor(newEditor);
+      if (articleToEdit) {
+        if (!title) setTitle(articleToEdit.title);
+        newEditor.root.innerHTML = articleToEdit.content;
+      }
     }
-  }, [editor]);
+  }, [editor, articleToEdit, title]);
 
   const submit = () => {
     const el = document.querySelector('.ql-editor');
     const content = el.innerHTML;
     const text = editor.getText() || '';
     dispatch.notes.submit({
+      ...(articleToEdit || {}),
       title: title || '无标题',
       content: content || '',
       summary: text.slice(0, 30),
@@ -66,3 +81,7 @@ export default () => {
     </div>
   );
 }
+
+const mapState = (state) => ({ ...state });
+
+export default connect(mapState)(Edit);

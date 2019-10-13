@@ -32,6 +32,18 @@ export default {
         ],
       }
     },
+    editNote(state, payload) {
+      const index = state.searchMap[payload._id];
+      const nextState = {
+        ...state,
+        list: [
+          ...state.list.slice(0, index),
+          payload,
+          ...state.list.slice(index + 1),
+        ],
+      };
+      return nextState;
+    },
     setSearchMap(state, payload = {}) {
       return {
         ...state,
@@ -42,17 +54,32 @@ export default {
   effects: (dispatch) => ({
     submit(payload) {
       const { title = '无标题', content = '', summary = '' } = payload;
-      dispatch.notes.addNote({
-        _id: getRandomId(32, 16),
-        created_at: Date.now(),
-        updated_at: Date.now(),
-        title,
-        content,
-        summary: summary,
-        cover: getRandomCover(),
-        status: 1,
-        last_edited_content: '',
-      });
+      if (payload._id) {
+        // 编辑旧笔记, id/created_at/cover 不用再次生成
+        dispatch.notes.editNote({
+          ...payload,
+          updated_at: Date.now(),
+          title,
+          content,
+          summary: summary,
+          status: 1,
+          last_edited_content: '',
+        });
+      } else {
+        // 新增
+        dispatch.notes.addNote({
+          _id: getRandomId(32, 16),
+          created_at: Date.now(),
+          updated_at: Date.now(),
+          title,
+          content,
+          summary: summary,
+          cover: getRandomCover(),
+          status: 1,
+          last_edited_content: '',
+        });
+      }
+
       dispatch.notes.refreshSearchMap();
       dispatch.notes.saveToLs();
     },

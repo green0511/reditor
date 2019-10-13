@@ -13,7 +13,6 @@ const Article = (props) => {
   const { list, searchMap } = props.notes || {};
   const articleIndex = searchMap[articleId];
   const articleData = list[articleIndex];
-  console.log(articleData);
 
   return (
     <div>
@@ -24,7 +23,7 @@ const Article = (props) => {
           className={`iconfont icon-jiantou-px ${style.topbarBackIcon}`}
         />
         <span 
-          onClick={() => history.push('/edit')}
+          onClick={() => history.push(`/edit/${articleData._id}`)}
           className={style.topbarEditIcon}
         >
           EDIT
