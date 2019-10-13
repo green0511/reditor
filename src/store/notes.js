@@ -45,12 +45,12 @@ export default {
   },
   effects: (dispatch) => ({
     submit(payload) {
-      const { title = '无标题', content = '' } = payload;
+      const { title = '无标题', content = '', summary = '' } = payload;
       dispatch.notes.addNote({
         create_at: Date.now(),
         title,
         content,
-        summary: content.slice(0, 30),
+        summary: summary
       });
     }
   })
