@@ -14,9 +14,11 @@ import { getFormtedDate } from '../../utils/util';
 
 const sortTypes = [
   { text: '最近更新', sortFn: (a, b) => b.updated_at - a.updated_at},
+  { text: '最近创建', sortFn: (a, b) => b.created_at - a.created_at},
   { text: '文件名(A-Z)', sortFn: (a, b) => b.title > a.title ? -1 : 1},
   { text: '文件名(Z-A)', sortFn: (a, b) => b.title > a.title ? 1 : -1},
   { text: '最早更新', sortFn: (a, b) => a.updated_at - b.updated_at},
+  { text: '最早创建', sortFn: (a, b) => a.created_at - b.created_at},
 ];
 
 const Home = (props = {}) => {
