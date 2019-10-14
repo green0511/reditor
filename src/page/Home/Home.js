@@ -37,6 +37,10 @@ const Home = (props = {}) => {
       </div>
       <p className={style.userName}>Hello, {user.name}</p>
       <p className={style.userGreet}>welcome to reditor</p>
+      <div className={style.searchBar} onClick={() => history.push('/search')}>
+        <span>搜索</span>
+        <i className="iconfont icon-sousuo" />
+      </div>
       <div className={style.listContainer}>
         <div className={style.listContainerTitle}>
           <p className={style.listContainerName}>Notes</p>

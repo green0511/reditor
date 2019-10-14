@@ -11,6 +11,7 @@ import Home from './page/Home/Home';
 
 const Article = loadable(() => import('./page/Article/Article'));
 const Edit = loadable(() => import('./page/Edit/Edit'));
+const Search = loadable(() => import('./page/Search/Search'));
 
 export default function App() {
   return (
@@ -21,6 +22,9 @@ export default function App() {
         </Route>
         <Route path="/edit/:id?">
           <Edit />
+        </Route>
+        <Route path="/search">
+          <Search />
         </Route>
         <Route path="/">
           <Home />

@@ -59,3 +59,15 @@ export const getFormtedDate = (date) => {
   const monStr = (MonthMap[month]).toUpperCase();
   return `${monStr} ${date.getDate()}, ${date.getFullYear()}`;
 };
+
+export const debounce = (func, duration) => {
+  let timeout;
+  return (...args) => {
+      clearTimeout(timeout);
+
+      timeout = setTimeout(() => {
+        func(...args);
+      }, duration)
+
+  }
+};

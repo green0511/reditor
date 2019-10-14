@@ -1,0 +1,75 @@
+.topbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.topbarInputContianer {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  flex: 1;
+  margin-left: 10px;
+  border-radius: 4px;
+  background-color: #eee;
+}
+
+.topbarInputContianer input {
+  background-color: transparent;
+  border: none;
+  flex: 1;
+  outline: none;
+  font-size: 14px;
+}
+
+.topbarInputContianer i {
+  padding: 0 10px;
+  color: #999;
+}
+
+.topbarCancelIcon {
+  height: 36px;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #333;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.searchResultCounts {
+  height: 48px;
+  line-height: 48px;
+  padding: 0 20px;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.searchResult {
+  margin: 0;
+  padding: 0 15px;
+  list-style: none;
+}
+
+.searchResultItem {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.searchResultTitle {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.searchResultSummary {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  color: #999;
+}
+
