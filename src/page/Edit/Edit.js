@@ -29,9 +29,9 @@ const Edit = (props) => {
       const newEditor = new Quill('#editor', {
         modules: {
           toolbar: [
-            [{ header: [1, 2, 3, 4, 5, false] }],
-            [{ 'color': [] }, { 'background': [] }],  
-            ['bold', 'italic', 'underline', 'strike', 'align'],
+            [{ header: [1, 2, 3, 4, 5, false] }, { 'color': [] }, { 'background': [] }],
+            ['bold', 'italic', 'underline', 'strike'],
+            [{'align': []}]
           ]
         },
         theme: 'snow'

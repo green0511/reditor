@@ -44,8 +44,8 @@ export const getFirstNote = () => {
     created_at: Date.now(),
     updated_at: Date.now(),
     title: '欢迎使用 Reditor 记事本', // 标题
-    content: '', // 富文本
-    summary: '', // 根据 content 生成，纯文字
+    content: '<p>Hello，欢迎使用 <strong>Reditor</strong> 记事本。</p><p>在这里，你可以使用丰富的编辑功能，创建、编辑你的笔记。</p><p><br></p><p>在首页可以查看你的笔记列表，使用排序功能可以更快找到你的笔记。若文档过多，还可以使用<u>搜索功能</u>查找你的笔记。</p><p><br></p><p>回到首页，点击页面右下角的创建按钮，开始你的 <strong>Reditor </strong>之旅吧~</p>', // 富文本
+    summary: 'Hello，欢迎使用 Reditor 记事本。在这里，你可以使用丰富的编辑功能，创建、编辑你的笔记。', // 根据 content 生成，纯文字
     cover: getRandomCover(), // 创建时从封面库随机取
     status: 1, // 0 - 回收站；1 - 正常；2 - 草稿；
     last_edited_content: '', // 暂未发布的修改内容；
