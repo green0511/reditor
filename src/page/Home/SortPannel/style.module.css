@@ -3,9 +3,10 @@
   overflow-x: auto;
   list-style: none;
   padding: 0 0 0 20px;
-  margin: 15px -20px;
+  margin: 0 -20px;
   white-space: nowrap;
   transition: .2s;
+  -webkit-overflow-scrolling: touch;
 }
 
 .sortPannelItem {
@@ -17,7 +18,7 @@
   font-size: 12px;
   color: #666;
   background-color: #eee;
-  margin-right: 10px;
+  margin: 15px 10px 15px 0;
 }
 
 .sortPannelItemSelected {
@@ -26,7 +27,7 @@
 }
 
 .sortPannelOpen {
-  height: 24px;
+  height: 54px;
 }
 
 .sortPannelClose {

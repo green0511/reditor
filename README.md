@@ -9,7 +9,3 @@ npm start
 ### Github Page 部署
 
 只需要合并到 `release` 分支，即可触发 `Travis CI` 自动构建、并部署到 Github Pages 服务。
-
-### 参考文档
-
-[需求拆解](https://docs.qq.com/doc/DWkFuc1RZaUhud0d6)

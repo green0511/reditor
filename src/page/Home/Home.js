@@ -33,10 +33,12 @@ const Home = (props = {}) => {
   return (
     <div>
       <div className={style.topbar}>
+        <div className={style.user}>
+          <p className={style.userName}>Hello, {user.name}</p>
+          <p className={style.userGreet}>welcome to reditor</p>
+        </div>
         <img src={user.avatar} className={style.avatar} alt={user.name} />
       </div>
-      <p className={style.userName}>Hello, {user.name}</p>
-      <p className={style.userGreet}>welcome to reditor</p>
       <div className={style.searchBar} onClick={() => history.push('/search')}>
         <span>搜索</span>
         <i className="iconfont icon-sousuo" />
