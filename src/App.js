@@ -5,11 +5,12 @@ import {
   Route,
 } from 'react-router-dom';
 
-import Home from './page/Home/Home';
-import Article from './page/Article/Article';
-import Edit from './page/Edit/Edit';
+import loadable from "@loadable/component";
 
-console.log(process.env);
+import Home from './page/Home/Home';
+
+const Article = loadable(() => import('./page/Article/Article'));
+const Edit = loadable(() => import('./page/Edit/Edit'));
 
 export default function App() {
   return (
