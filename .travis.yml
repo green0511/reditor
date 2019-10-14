@@ -1,0 +1,33 @@
+language: node_js
+node_js: stable
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+
+script:
+  - npm run build
+
+after_script:
+  - git clone https://${GH_REF} .deploy_git
+  - cd .deploy_git
+  - git checkout master
+  - cd ../
+  - mv .deploy_git/.git/ ./build/
+  - cd ./build
+  - git init
+  - git config user.name "green0511"
+  - git config user.email "linhao_me@163.com"
+  - git add .
+  - git commit -m ":memo:\ Update docs by CI"
+  - git push --force --quiet "https://${CI_TOKEN}@${GH_REF}" master:master
+
+branches:
+  only:
+    - release
+env:
+ global:
+   - GH_REF: github.com:green0511/reditor.git
+   
