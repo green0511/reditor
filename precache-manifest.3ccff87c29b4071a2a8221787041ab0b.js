@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4823135849c0207a270735fdade09487",
+    "revision": "c879e202d220c4d13bb3443304a43c19",
     "url": "/reditor/index.html"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reditor/static/css/6.60621bec.chunk.css"
   },
   {
-    "revision": "d53de679dadbcb9bc6a5",
-    "url": "/reditor/static/css/main.a096e8a6.chunk.css"
+    "revision": "21630e57c81711807d1d",
+    "url": "/reditor/static/css/main.378094ac.chunk.css"
   },
   {
     "revision": "4cd0c6813dee6adf1c95",
@@ -44,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reditor/static/js/6.8672ab51.chunk.js"
   },
   {
-    "revision": "d53de679dadbcb9bc6a5",
-    "url": "/reditor/static/js/main.5f76315c.chunk.js"
+    "revision": "21630e57c81711807d1d",
+    "url": "/reditor/static/js/main.bd02172a.chunk.js"
   },
   {
     "revision": "dbc50ff591093220979c",
