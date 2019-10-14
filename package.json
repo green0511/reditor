@@ -5,6 +5,7 @@
   "dependencies": {
     "@loadable/component": "^5.10.3",
     "@rematch/core": "^1.2.0",
+    "if-env": "^1.0.4",
     "quill": "^1.3.6",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -13,7 +14,7 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "postinstall": "npm start",
+    "postinstall": "if-env BUILD_ENV=CI || npm start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
