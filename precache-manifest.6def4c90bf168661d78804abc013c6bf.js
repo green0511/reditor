@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "930f08388be6d07552a3fbef12e7be15",
+    "revision": "dae1aa7010460db2903b3a78f0315f3c",
     "url": "/reditor/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reditor/static/css/4.129aa9ce.chunk.css"
   },
   {
-    "revision": "2f83cd8cb83961692dd8",
-    "url": "/reditor/static/css/5.1e344a9b.chunk.css"
+    "revision": "78a40f476b8948c8d5f4",
+    "url": "/reditor/static/css/5.9b05c6df.chunk.css"
   },
   {
     "revision": "78c7382899a9939b0cca",
@@ -36,7 +36,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reditor/static/js/4.9ef2fb74.chunk.js"
   },
   {
-    "revision": "2f83cd8cb83961692dd8",
+    "revision": "78a40f476b8948c8d5f4",
     "url": "/reditor/static/js/5.06798412.chunk.js"
   },
   {
@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reditor/static/js/main.bd02172a.chunk.js"
   },
   {
-    "revision": "6367e28967690a77f913",
-    "url": "/reditor/static/js/runtime-main.abd0c275.js"
+    "revision": "7ad8a479ecc29f7cbbb5",
+    "url": "/reditor/static/js/runtime-main.44169686.js"
   }
 ]);
