@@ -3,6 +3,7 @@
 ### 开始开发
 
 ```
+npm install
 npm start
 ```
 

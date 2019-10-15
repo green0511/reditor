@@ -62,6 +62,8 @@
 }
 
 .contentInput {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   border: none;
   outline: none;
@@ -69,6 +71,10 @@
   padding: 0 15px;
   background-color: #fff;
   font-size: 16px;
+}
+
+.contentInput :global(.ql-editor) {
+  flex: 1;
 }
 
 .pannelContainer {
